@@ -1,9 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 
 
-const prisma = new PrismaClient({
-  datasourceUrl: "postgresql://postgres:postgres@127.0.0.1:5432/nutrilog?schema=public"
-});
+const prisma = new PrismaClient();
 
 export const schoolService = {
  
