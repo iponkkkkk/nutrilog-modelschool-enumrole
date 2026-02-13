@@ -1,15 +1,13 @@
-import { PrismaClient } from "@prisma/client";
 
-
-const prisma = new PrismaClient();
+import { prisma } from "../../utils/prisma.js"; 
 
 export const schoolService = {
- 
+  
   getAll: async () => {
     return await prisma.school.findMany();
   },
 
- 
+
   getById: async (id: string) => {
     return await prisma.school.findUnique({
       where: { id },
@@ -29,6 +27,7 @@ export const schoolService = {
       data,
     });
   },
+
 
   delete: async (id: string) => {
     return await prisma.school.delete({
