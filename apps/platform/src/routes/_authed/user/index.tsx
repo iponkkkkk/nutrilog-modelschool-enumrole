@@ -38,7 +38,7 @@ const ROLES = [
 	"AUDITOR",
 ] as const;
 
-export const Route = createFileRoute("/_authed/user")({
+export const Route = createFileRoute("/_authed/user/")({
 	component: UserPage,
 	staticData: {
 		crumb: {
@@ -97,7 +97,6 @@ function UserPage() {
 			<div className="flex items-center justify-between">
 				<h1 className="text-2xl font-bold">User Management</h1>
 			</div>
-
 			{isLoading ? (
 				<p>Loading...</p>
 			) : (

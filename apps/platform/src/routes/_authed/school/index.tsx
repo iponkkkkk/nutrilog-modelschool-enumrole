@@ -25,7 +25,7 @@ import {
 	useUpdateSchool,
 } from "@/modules/school/hooks/useSchool";
 
-export const Route = createFileRoute("/school/")({
+export const Route = createFileRoute("/_authed/school/")({
 	component: SchoolPage,
 	staticData: {
 		crumb: { module: "School", action: "List", module_path: "/_authed/school" },
